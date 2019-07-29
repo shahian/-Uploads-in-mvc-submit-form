@@ -1,0 +1,21 @@
+public ActionResult IndexTest()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult IndexTest(CusotmerSandoghModel model)
+        {
+            foreach (var item in model.BaseFile)
+            {
+                FilePost(item);
+            }
+            return View();
+        }
+
+        private void FilePost(HttpPostedFileBase file)
+        {
+            if (file != null && file.ContentLength > 0)
+            {
+
+            }
+        }
